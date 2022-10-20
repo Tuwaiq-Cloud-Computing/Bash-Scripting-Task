@@ -6,12 +6,7 @@ echo " $UID $USER"
 
 echo "$(whoami)"
 
-if [ "$(whoami)" = "yaman" ]
-then
-     echo "you are yaman"
-     else
-     echo "you are not yaman"
-fi
+test "$(whoami)" = "yaman" && echo "yes" || echo "no"   
 
 for i in {1..3}
 do
