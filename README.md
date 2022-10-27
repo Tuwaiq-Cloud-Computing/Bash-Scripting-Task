@@ -25,3 +25,5 @@ EXPIRATION_DAY, and ROLE of the user) <br/> **hint**:use read command
 
 - After finishing the task take screen shot of the script and the output after run the script.
 - Then upload the pictures to the forked repo and then create a pull request.
+![bashscript1](https://user-images.githubusercontent.com/113862309/198259684-a1cd5e5f-1c93-473d-a83a-b46568df3bdd.png)
+![bashscript2](https://user-images.githubusercontent.com/113862309/198259705-a5cd7b0c-c2b3-4fac-b83c-cd509ff65ee6.png)
