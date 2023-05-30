@@ -1,27 +1,2 @@
-# Bash-Scripting-Task
-
-
-## Setup:
-
-mkdir ~/scripts && cd scripts && touch script.sh
-
-
-## Tasks:
-
-**Write a bash script to do the following tasks:**
-
-- Display the UID and username of the user executing the script.
-- Test if the last command succeeded and display a message to indicate the status.
-- Display if the user is the root user or not.
-- Check if the logged in user matches the user yaman (use string test conditional).
-- Create 3 users by using a for loop (where each iteration will ask for USERNAME,
-EXPIRATION_DAY, and ROLE of the user) <br/> **hint**:use read command 
-
-## Additional Challenge:
-
-- Use crontab to run a script that will save the output of the uptime each minute in script_log.txt.
-
-## Submission:
-
-- After finishing the task take screen shot of the script and the output after run the script.
-- Then upload the pictures to the forked repo and then create a pull request.
+<img width="745" alt="Screen Shot 2023-05-30 at 7 46 05 PM" src="https://github.com/ram1050/Bash-Scripting-Task/assets/74604230/6ca98621-fa47-466b-a4a7-8d02af85b65a">
+<img width="935" alt="Screen Shot 2023-05-30 at 7 44 59 PM" src="https://github.com/ram1050/Bash-Scripting-Task/assets/74604230/260fe448-1315-4e57-a86e-7ca1904ed9b5">
