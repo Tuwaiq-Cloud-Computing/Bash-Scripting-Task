@@ -1,0 +1,42 @@
+ #!/bin/bash
+
+uid=$(id -u)
+username=$(id -un)
+echo "UID: $uid"
+echo "Username: $username"
+
+ls
+
+if [ $? -eq 0 ]; then
+  echo "Command succeeded"
+else
+  echo "Command failed"
+fi
+
+if [ $EUID -eq 0 ]; then
+  echo "User is the root user"
+else
+  echo "User is not the root user"
+fi
+
+logged_in_u=$(whoami)
+wanted_user="yaman"
+if [ "$logged_in_u" = "$wanted_user" ]; then
+        echo "logged-in user is 'yaman'"
+else
+        echo "logged-in user is not 'yaman'"
+fi
+
+for i in {1..3};
+
+do
+
+echo "createuser $i"
+read -p "Enter username $i" username
+read -p "Enter expiration day $i"expiration_day
+read -p "Enter User Role $i" userrole
+
+useradd = -e $expiration_day -c $userrole $username
+
+echo "user $username created with expiration date $expiration_day and role $userrole "
+done
