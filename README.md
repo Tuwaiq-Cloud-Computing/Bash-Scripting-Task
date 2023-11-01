@@ -1,27 +1,49 @@
-# Bash-Scripting-Task
+```sh
+#!/bin/bash
+echo "Your UID is: $UID"
+echo "Your username is: $USER"
+
+if [ $? -eq 0 ]
+then
+  echo "The last command executed successfully."
+else
+  echo "The last command failed."
+fi
 
 
-## Setup:
+if [ $UID -eq 0 ]
+then
+  echo "You are root."
+else
+  echo "You are not root."
+fi
 
-mkdir ~/scripts && cd scripts && touch script.sh
+
+if [ $USER == 'yaman' ]
+then
+  echo "You are logged in as yaman."
+else
+  echo "You are not logged in as yaman."
+fi
 
 
-## Tasks:
+for ((i=1; i<=3; i++))
+do
+  echo "Creating user $i:"
+  echo "Please enter the username:"
+  read USERNAME
+  echo "Please enter the expiration day (in the format YYYY-MM-DD):"
+  read EXPIRATION_DAY
+  echo "Please enter the role of the user:"
+  read ROLE
 
-**Write a bash script to do the following tasks:**
-
-- Display the UID and username of the user executing the script.
-- Test if the last command succeeded and display a message to indicate the status.
-- Display if the user is the root user or not.
-- Check if the logged in user matches the user yaman (use string test condition).
-- Create 3 users by using a for loop (where each iteration will ask for USERNAME,
-EXPIRATION_DAY, and ROLE of the user) <br/> **hint**:use read command 
-
-## Additional Challenge:
-
-- Use crontab to run a script that will save the output of the uptime each minute in script_log.txt.
-
-## Submission:
-
-- After finishing the task take screen shot of the script and the output after run the script.
-- Then upload the pictures to the forked repo and then create a pull request.
+ 
+  if [ $UID -eq 0 ]
+  then
+    useradd -e $EXPIRATION_DAY -c "$ROLE" $USERNAME
+    echo "User $USERNAME has been added."
+  else
+    echo "Only root can add a user."
+  fi
+done
+```
